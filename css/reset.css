@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: var(--text-base);
+  font-weight: var(--font-regular);
+  font-family: var(--primary-font);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
