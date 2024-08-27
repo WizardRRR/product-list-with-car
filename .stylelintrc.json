@@ -1,0 +1,9 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-order"],
+  "ignoreFiles": ["node_modules"],
+  "rules": {
+    "at-rule-empty-line-before": "never",
+    "order/properties-alphabetical-order": true
+  }
+}

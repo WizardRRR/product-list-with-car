@@ -1,10 +1,10 @@
 body {
-  min-height: 100vh;
   background-color: var(--rose-50);
+  min-height: 100vh;
   padding: 20px;
 }
 
 h1 {
-  font-weight: var(--font-bold);
   font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
 }

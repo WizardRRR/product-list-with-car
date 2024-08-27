@@ -1,10 +1,10 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  font-family: var(--primary-font);
   font-size: var(--text-base);
   font-weight: var(--font-regular);
-  font-family: var(--primary-font);
+  margin: 0;
+  padding: 0;
 }
 
 button {

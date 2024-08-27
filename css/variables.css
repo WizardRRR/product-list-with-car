@@ -1,21 +1,19 @@
 :root {
-  --red: hsl(14, 86%, 42%);
-  --green: hsl(159, 69%, 38%);
-  --rose-50: hsl(20, 50%, 98%);
-  --rose-100: hsl(13, 31%, 94%);
-  --rose-300: hsl(14, 25%, 72%);
-  --rose-400: hsl(7, 20%, 60%);
-  --rose-500: hsl(12, 20%, 44%);
-  --rose-900: hsl(14, 65%, 9%);
-
+  --red: hsl(14deg 86% 42%);
+  --green: hsl(159deg 69% 38%);
+  --rose-50: hsl(20deg 50% 98%);
+  --rose-100: hsl(13deg 31% 94%);
+  --rose-300: hsl(14deg 25% 72%);
+  --rose-400: hsl(7deg 20% 60%);
+  --rose-500: hsl(12deg 20% 44%);
+  --rose-900: hsl(14deg 65% 9%);
   --text-sm: 14px;
   --text-base: 16px;
   --text-lg: 18px;
   --text-2xl: 24px;
   --text-3xl: 30px;
-
   --font-regular: 400;
   --font-semibold: 600;
   --font-bold: 700;
-  --primary-font: RedHat;
+  --primary-font: redhat;
 }
