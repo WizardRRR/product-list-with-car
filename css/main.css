@@ -1,10 +1,147 @@
+/* General Styles */
 body {
   background-color: var(--rose-50);
-  min-height: 100vh;
+  font-family: var(--primary-font);
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
   font-size: var(--text-3xl);
   font-weight: var(--font-bold);
+  margin-bottom: 20px;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-product {
+  background-color: var(--rose-100);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+.card-product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card-product h2 {
+  font-size: var(--text-lg);
+  margin: 10px 0;
+}
+
+.card-product p {
+  font-size: var(--text-base);
+  color: var(--rose-900);
+  margin: 5px 0;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.quantity button {
+  background-color: var(--green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: var(--text-lg);
+}
+
+.quantity-input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid var(--rose-300);
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--green);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.add-to-cart img.icon-carrito {
+  width: 20px;
+  height: auto;
+}
+
+.cart {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--rose-100);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cart h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: 20px;
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.cart-total {
+  font-size: var(--text-lg);
+  margin-top: 20px;
+}
+
+.confirm-order {
+  background-color: var(--red);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.remove-item {
+  background-color: var(--red);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
 }

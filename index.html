@@ -1,31 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
-
-    <title>Frontend Mentor | Product list with cart</title>
-    <link rel="stylesheet" href="css/index.css" />
-  </head>
-  </script>
-  <body>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <title>Product List with Cart</title>
+    <link rel="stylesheet" href="/css/index.css" />
+</head>
+<body>
     <h1>Dessert</h1>
-    <div class="card-product">
-      <img
-        src="./assets/images/image-waffle-desktop.jpg"
-        alt="profile"
-        width="150px"
-        height="150px"
-      />
-      <button>Add to Cart</button>
+    <div class="products">
+      <div class="card-product">
+        <img src="./assets/images/image-waffle-desktop.jpg" alt="Waffle" class="product-image" />
+        <h2>Waffle</h2>
+        <p class="product-description">Waffle with Berries.</p>
+        <p class="product-price">$5.00</p>
+        <div class="quantity">
+            <button class="quantity-increase"><img src="/assets/images/icon-increment-quantity.svg" alt="Increase"></button>
+            <input type="number" class="quantity-input" value="1" min="1" />
+            <button class="quantity-decrease"><img src="/assets/images/icon-decrement-quantity.svg" alt="Decrease"></button>
+        </div>
+        <button class="add-to-cart">
+            <img src="/assets/images/icon-add-to-cart.svg" alt="Add to Cart" class="icon-carrito" />
+            Add to Cart
+        </button>
     </div>
-  </body>
+    <div class="card-product">
+        <img src="./assets/images/image-creme-brulee-desktop.jpg" alt="Creme Brulee" class="product-image" />
+        <h2>Creme Brulee</h2>
+        <p class="product-description">Vanilla Bean Creme Brulee.</p>
+        <p class="product-price">$6.00</p>
+        <div class="quantity">
+            <button class="quantity-increase"><img src="/assets/images/icon-increment-quantity.svg" alt="Increase"></button>
+            <input type="number" class="quantity-input" value="1" min="1" />
+            <button class="quantity-decrease"><img src="/assets/images/icon-decrement-quantity.svg" alt="Decrease"></button>
+        </div>
+        <button class="add-to-cart">
+            <img src="/assets/images/icon-add-to-cart.svg" alt="Add to Cart" class="icon-carrito" />
+            Add to Cart
+        </button>
+    </div>
+    <div class="card-product">
+        <img src="./assets/images/image-macaron-desktop.jpg" alt="Macaron" class="product-image" />
+        <h2>Macaron</h2>
+        <p class="product-description">Macaron Mix of Five.</p>
+        <p class="product-price">$4.00</p>
+        <div class="quantity">
+            <button class="quantity-increase"><img src="/assets/images/icon-increment-quantity.svg" alt="Increase"></button>
+            <input type="number" class="quantity-input" value="1" min="1" />
+            <button class="quantity-decrease"><img src="/assets/images/icon-decrement-quantity.svg" alt="Decrease"></button>
+        </div>
+        <button class="add-to-cart">
+            <img src="/assets/images/icon-add-to-cart.svg" alt="Add to Cart" class="icon-carrito" />
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="card-product">
+        <img src="./assets/images/image-tiramisu-desktop.jpg" alt="Tiramisu" class="product-image" />
+        <h2>Tiramisu</h2>
+        <p class="product-description">Classic Tiramisu.</p>
+        <p class="product-price">$3.50</p>
+        <div class="quantity">
+            <button class="quantity-increase"><img src="/assets/images/icon-increment-quantity.svg" alt="Increase"></button>
+            <input type="number" class="quantity-input" value="1" min="1" />
+            <button class="quantity-decrease"><img src="/assets/images/icon-decrement-quantity.svg" alt="Decrease"></button>
+        </div>
+        <button class="add-to-cart">
+            <img src="/assets/images/icon-add-to-cart.svg" alt="Add to Cart" class="icon-carrito" />
+            Add to Cart
+        </button>
+    </div>
+    <div class="card-product">
+        <img src="./assets/images/image-baklava-desktop.jpg" alt="Baklava" class="product-image" />
+        <h2>Baklava</h2>
+        <p class="product-description">Pistachio Baklava.</p>
+        <p class="product-price">$3.00</p>
+        <div class="quantity">
+            <button class="quantity-increase"><img src="/assets/images/icon-increment-quantity.svg" alt="Increase"></button>
+            <input type="number" class="quantity-input" value="1" min="1" />
+            <button class="quantity-decrease"><img src="/assets/images/icon-decrement-quantity.svg" alt="Decrease"></button>
+        </div>
+        <button class="add-to-cart">
+            <img src="/assets/images/icon-add-to-cart.svg" alt="Add to Cart" class="icon-carrito" />
+            Add to Cart
+        </button>
+    </div>
+    <div class="card-product">
+        <img src="./assets/images/image-meringue-desktop.jpg" alt="Pie" class="product-image" />
+        <h2>Lemon Meringue Pie</h2>
+        <p class="product-description">Lemon Meringue Pie.</p>
+        <p class="product-price">$5.50</p>
+        <div class="quantity">
+            <button class="quantity-increase"><img src="/assets/images/icon-increment-quantity.svg" alt="Increase"></button>
+            <input type="number" class="quantity-input" value="1" min="1" />
+            <button class="quantity-decrease"><img src="/assets/images/icon-decrement-quantity.svg" alt="Decrease"></button>
+        </div>
+        <button class="add-to-cart">
+            <img src="/assets/images/icon-add-to-cart.svg" alt="Add to Cart" class="icon-carrito" />
+            Add to Cart
+        </button>
+    </div>
+    <div class="card-product">
+        <img src="./assets/images/image-cake-desktop.jpg" alt="Cake" class="product-image" />
+        <h2>Cake</h2>
+        <p class="product-description">Red Velvet Cake.</p>
+        <p class="product-price">$4.50</p>
+        <div class="quantity">
+            <button class="quantity-increase"><img src="/assets/images/icon-increment-quantity.svg" alt="Increase"></button>
+            <input type="number" class="quantity-input" value="1" min="1" />
+            <button class="quantity-decrease"><img src="/assets/images/icon-decrement-quantity.svg" alt="Decrease"></button>
+        </div>
+        <button class="add-to-cart">
+            <img src="/assets/images/icon-add-to-cart.svg" alt="Add to Cart" class="icon-carrito" />
+            Add to Cart
+        </button>
+    </div>
+    <div class="card-product">
+        <img src="./assets/images/image-brownie-desktop.jpg" alt="Brownie" class="product-image" />
+        <h2>Brownie</h2>
+        <p class="product-description">Salted Caramel Brownie.</p>
+        <p class="product-price">$7.00</p>
+        <div class="quantity">
+            <button class="quantity-increase"><img src="/assets/images/icon-increment-quantity.svg" alt="Increase"></button>
+            <input type="number" class="quantity-input" value="1" min="1" />
+            <button class="quantity-decrease"><img src="/assets/images/icon-decrement-quantity.svg" alt="Decrease"></button>
+        </div>
+        <button class="add-to-cart">
+          <img src="/assets/images/icon-add-to-cart.svg" alt="Add to Cart" class="icon-carrito" />
+          Add to Cart
+      </button>
+    </div>
+    <div class="card-product">
+        <img src="./assets/images/image-panna-cotta-desktop.jpg" alt="Panna Cotta" class="product-image" />
+        <h2>Panna Cotta</h2>
+        <p class="product-description">Vanilla Panna Cotta.</p>
+        <p class="product-price">$6.50</p>
+        <div class="quantity">
+            <button class="quantity-increase"><img src="/assets/images/icon-increment-quantity.svg" alt="Increase"></button>
+            <input type="number" class="quantity-input" value="1" min="1" />
+            <button class="quantity-decrease"><img src="/assets/images/icon-decrement-quantity.svg" alt="Decrease"></button>
+        </div>
+        <button class="add-to-cart">
+          <img src="/assets/images/icon-add-to-cart.svg" alt="Add to Cart" class="icon-carrito" />
+          Add to Cart
+      </button>
+    </div>
+</div>
+
+    <div class="cart">
+        <h2>Your Cart ()</h2>
+        <ul class="cart-items"></ul>
+        <img src="/assets/images/illustration-empty-cart.svg" alt="">
+        <div class="cart-total">
+            <p>Total: $<span id="total-amount">0.00</span></p>
+            <button class="confirm-order">Confirm Order</button>
+        </div>
+    </div>
+
+    <script src="/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
 </html>
