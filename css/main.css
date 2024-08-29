@@ -1,9 +1,8 @@
-/* General Styles */
 body {
   background-color: var(--rose-50);
   font-family: var(--primary-font);
   padding: 20px;
-  display: flex;
+  display: grid;
   flex-direction: column;
   align-items: center;
 }
@@ -14,10 +13,10 @@ h1 {
   margin-bottom: 20px;
 }
 .products {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  grid-template-columns: repeat(3, minmax(250px, 3fr))
 }
 
 .card-product {
@@ -25,13 +24,18 @@ h1 {
   padding: 15px;
   border-radius: 10px;
   text-align: center;
-  width: 200px;
+  width: 300px;
+  
 }
 
+.product-image{
+  border: 4px black solid;
+}
 .card-product img {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  
 }
 
 .card-product h2 {
@@ -53,7 +57,7 @@ h1 {
 }
 
 .quantity button {
-  background-color: var(--green);
+  background-color: var(--rose-300);
   color: white;
   border: none;
   border-radius: 5px;
@@ -71,16 +75,18 @@ h1 {
 }
 
 .add-to-cart {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
   align-items: center;
   justify-content: center;
-  background-color: var(--green);
-  color: white;
+  background-color: var(--rose-50);
+  color: rgb(6, 5, 5);
   padding: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   gap: 10px;
+  margin: 0 auto; 
 }
 
 .add-to-cart img.icon-carrito {
