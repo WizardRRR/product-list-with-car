@@ -7,4 +7,54 @@ body {
 h1 {
   font-size: var(--text-3xl);
   font-weight: var(--font-bold);
+  margin-bottom: 20px;
+}
+
+.container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+  overflow: hidden;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.info {
+  padding: 15px;
+}
+
+.info h2 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  margin-bottom: 5px;
+}
+
+.price {
+  color: var(--rose-500);
+  font-weight: var(--font-bold);
+}
+
+.add-to-cart {
+  background-color: var(--rose-100);
+  border: none;
+  color: var(--rose-900);
+  cursor: pointer;
+  font-weight: var(--font-semibold);
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.add-to-cart:hover {
+  background-color: var(--rose-300);
 }
