@@ -10,10 +10,13 @@
   --text-sm: 14px;
   --text-base: 16px;
   --text-lg: 18px;
+  --text-xl: 20px;
   --text-2xl: 24px;
   --text-3xl: 30px;
   --font-regular: 400;
   --font-semibold: 600;
   --font-bold: 700;
   --primary-font: redhat;
+  --rounded-md: 8px;
+  --rounded-full: 9999px;
 }
