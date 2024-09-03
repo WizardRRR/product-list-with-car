@@ -1,5 +1,8 @@
 body {
   background-color: var(--rose-100);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   min-height: 100vh;
   padding: 20px;
 }
@@ -7,4 +10,11 @@ body {
 h1 {
   font-size: var(--text-3xl);
   font-weight: var(--font-bold);
+}
+
+.card-product-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-items: center;
+  width: min(100%, 1000px);
 }

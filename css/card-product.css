@@ -9,31 +9,68 @@
   justify-content: center;
   position: relative;
 
-  & img {
-    width: 100%;
+  & > img {
+    border-radius: var(--rounded-md);
     height: 250px;
     object-fit: cover;
-    border-radius: var(--rounded-md);
+    width: 100%;
   }
 
-  & button {
-    position: absolute;
-    bottom: 0;
-    transform: translateY(50%);
-    display: flex;
+  & > button {
     align-items: center;
-    gap: 10px;
+    background-color: var(--rose-50);
     border: 2px solid var(--red);
-    padding: 15px 30px;
     border-radius: var(--rounded-full);
+    bottom: 0;
+    display: flex;
     font-size: var(--text-lg);
     font-weight: var(--font-semibold);
-    background-color: var(--rose-50);
+    gap: 10px;
+    padding: 15px 30px;
+    position: absolute;
+    transform: translateY(50%);
 
     & img {
-      width: 25px;
       height: 25px;
+      width: 25px;
     }
+  }
+}
+
+.counter-product {
+  align-items: center;
+  background-color: var(--red);
+  border: 2px solid var(--red);
+  border-radius: var(--rounded-full);
+  bottom: 0;
+  display: flex;
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  gap: 30px;
+  padding: 15px 30px;
+  position: absolute;
+  transform: translateY(50%);
+
+  & > button {
+    background-color: transparent;
+    border: 2px solid var(--rose-50);
+    border-radius: var(--rounded-full);
+    cursor: pointer;
+    display: grid;
+    height: 25px;
+    padding: 5px;
+    place-items: center;
+    width: 25px;
+
+    & img {
+      height: 10px;
+      width: 10px;
+    }
+  }
+
+  & span {
+    color: var(--rose-50);
+    font-weight: var(--font-semibold);
   }
 }
 
@@ -41,21 +78,22 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 40px 0px;
+  padding: 0;
+  padding-top: 40px;
 
   & span:first-child {
     color: var(--rose-400);
   }
 
   & h5 {
-    font-weight: var(--font-bold);
-    font-size: var(--text-lg);
     color: var(--rose-900);
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
   }
 
   & span:last-child {
-    font-size: var(--text-xl);
     color: var(--red);
+    font-size: var(--text-xl);
     font-weight: var(--font-bold);
   }
 }
