@@ -26,13 +26,14 @@ export function renderCardProduct(product, mode, countOrdersDesserts) {
                   style="pointer-events:none"
                   src="./assets/images/icon-increment-quantity.svg"
                   alt="disminuir en uno al carrito"
-                />
-            </button>
-          </div>
-          <button class="btn-add-product" id="btn-add-product-${product.name}" 
-          style="display:${countCar == 0 ? "flex" : "none"};" 
-          data-name="${product.name}">
-             <img
+                  />
+                  </button>
+                  </div>
+                  <button class="btn-add-product" id="btn-add-product-${product.name}" 
+                  style="display:${countCar == 0 ? "flex" : "none"};" 
+                  data-name="${product.name}">
+            <img
+               style="pointer-events:none"
                src="./assets/images/icon-add-to-cart.svg"
                alt="añadir al carrito"
                width="25px"

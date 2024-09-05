@@ -13,6 +13,7 @@ h1 {
 }
 
 .card-product-wrapper {
+  gap: 40px 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-items: center;

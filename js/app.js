@@ -27,6 +27,8 @@ function handleClickAddToCart(event) {
   const { name } = event.target.dataset;
   countOrdersDesserts[name] += 1;
   const containerDessert = d.getElementById(name);
+  const imgDessert = containerDessert.querySelector(".container-image img");
+  imgDessert.style = "border: 3px solid var(--red);";
   const btnAddToCart = containerDessert.querySelector(".btn-add-product");
   btnAddToCart.style = "display:none";
   const btnCounterProduct = containerDessert.querySelector(".counter-product");
@@ -94,6 +96,10 @@ function addEventsUI() {
       counter.innerHTML = countOrdersDesserts[name];
       if (countOrdersDesserts[name] == 0) {
         const containerDessert = d.getElementById(name);
+        const imgDessert = containerDessert.querySelector(
+          ".container-image img"
+        );
+        imgDessert.style = "";
         $(".counter-product", containerDessert).style = "display:none;";
         $(".btn-add-product", containerDessert).style = "display:flex;";
       }
