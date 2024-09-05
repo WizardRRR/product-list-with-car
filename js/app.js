@@ -87,6 +87,7 @@ function incrementCounterDessert(name) {
   window.synchronizeProductButtons();
 }
 
+
 function listenerResize(event) {
   const { innerWidth } = event.target;
   if (innerWidth > 425 && innerWidth < 768) {

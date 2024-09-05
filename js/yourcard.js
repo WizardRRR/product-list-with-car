@@ -117,6 +117,7 @@ export function Yourcard() {
             updateCart();
         });
 
+        
         // Exportar las funciones 
         window.addToCart = addToCart;
         window.removeFromCartIfQuantityZero = (name) => {
