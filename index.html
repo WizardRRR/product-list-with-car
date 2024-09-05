@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,7 +19,40 @@
   </head>
   <body>
     <h1>Dessert</h1>
-    <div id="card-product-container" class="card-product-wrapper"></div>
+    <div></div>
+    <main class="main">
+      <div id="card-product-container" class="card-product-wrapper"></div>
+      <div id="shopping-cart">
+        <h3>Your Cart <span>(7)</span></h3>
+        <div class="card-item-dessert">
+          <div class="card-item-dessert-data">
+            <p>Classic Tiramisu</p>
+            <p>
+              <span class="count-total-dessert">1x</span
+              ><span class="price-dessert">@$5.50</span
+              ><span class="price-total-dessert">$22.00</span>
+            </p>
+          </div>
+          <div class="card-item-dessert-delete">
+            <button>
+              <img src="./assets/images/icon-remove-item.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="car-order-total">
+          <p>Order Total</p>
+          <span>$46</span>
+        </div>
+        <div class="car-carbon-neutral">
+          <img
+            src="./assets/images/icon-carbon-neutral.svg"
+            alt="carbon neutral"
+          />
+          <p>This is a <span>carbon-neutral</span> delivery</p>
+        </div>
+        <button class="car-confirm-order">Confirm Order</button>
+      </div>
+    </main>
     <div class="modal"></div>
   </body>
 </html>

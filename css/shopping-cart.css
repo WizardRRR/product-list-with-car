@@ -1,0 +1,97 @@
+#shopping-cart {
+  width: min(100%, 500px);
+  align-self: center;
+  background-color: var(--rose-50);
+  border-radius: var(--rounded-md);
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+
+  @media (min-width: 1280px) {
+    align-self: flex-start;
+    width: min(100%, 350px);
+  }
+
+  & h3 {
+    color: var(--red);
+    font-weight: var(--font-bold);
+    font-size: var(--text-2xl);
+
+    & span {
+      font-weight: inherit;
+      font-size: inherit;
+    }
+  }
+
+  & > img {
+    align-self: center;
+    height: 150px;
+    width: 150px;
+  }
+
+  & > p {
+    text-align: center;
+    color: var(--rose-500);
+    font-weight: var(--font-semibold);
+  }
+  /* @media (min-width: 1280px) {
+    width: min(100%, 300px);
+  } */
+}
+
+.card-item-dessert {
+  display: flex;
+}
+
+.card-item-dessert-data {
+  flex-grow: 1;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  & p {
+    font-weight: var(--font-bold);
+    color: var(--rose-900);
+  }
+  & p:last-child {
+    display: flex;
+    gap: 10px;
+    .count-total-dessert {
+      color: var(--red);
+      font-weight: var(--font-bold);
+    }
+    .price-dessert {
+      color: var(--rose-500);
+    }
+    .price-total-dessert {
+      color: var(--rose-500);
+      font-weight: var(--font-semibold);
+    }
+  }
+}
+
+.card-item-dessert-delete {
+  align-self: center;
+  display: grid;
+  place-items: center;
+  flex-basis: 40px;
+
+  & button {
+    display: grid;
+    place-items: center;
+    border-radius: var(--rounded-full);
+    border: 2px solid var(--rose-500);
+    & img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.car-carbon-neutral {
+}
+
+.car-confirm-order {
+}
