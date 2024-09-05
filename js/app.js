@@ -1,5 +1,8 @@
 import { getDesserts } from "./fetch.js";
 import { renderCardProduct } from "./renders.js";
+import { Yourcard } from "./yourcard.js";
+
+Yourcard();
 
 const d = document;
 const desserts = await getDesserts();
@@ -14,7 +17,7 @@ const countOrdersDesserts = Object.assign(
 
 renderMenuDesserts(mode);
 addEventsUI();
-// añadiendo evento de resize
+
 window.addEventListener("resize", listenerResize);
 
 function renderMenuDesserts(mode) {
@@ -28,21 +31,60 @@ function handleClickAddToCart(event) {
   countOrdersDesserts[name] += 1;
   const containerDessert = d.getElementById(name);
   const btnAddToCart = containerDessert.querySelector(".btn-add-product");
-  btnAddToCart.style = "display:none";
   const btnCounterProduct = containerDessert.querySelector(".counter-product");
-  btnCounterProduct.style = "display:flex";
+
+  btnAddToCart.style.display = "none";
+  btnCounterProduct.style.display = "flex";
   btnCounterProduct.querySelector("span").innerHTML = countOrdersDesserts[name];
+
+  const dessert = desserts.find(d => d.name === name);
+  if (dessert) {
+    window.addToCart(dessert);
+  }
+
+  //los botones de los productos
+  window.synchronizeProductButtons();
 }
 
 function decrementCounterDessert(name) {
   if (countOrdersDesserts[name] === 0) return;
   countOrdersDesserts[name] -= 1;
-  console.log(countOrdersDesserts);
+
+  const containerDessert = d.getElementById(name);
+  const btnAddToCart = containerDessert.querySelector(".btn-add-product");
+  const btnCounterProduct = containerDessert.querySelector(".counter-product");
+
+  if (countOrdersDesserts[name] === 0) {
+    btnCounterProduct.style.display = "none";
+    btnAddToCart.style.display = "flex";
+  } else {
+    btnCounterProduct.querySelector("span").innerHTML = countOrdersDesserts[name];
+  }
+
+  const dessert = desserts.find(d => d.name === name);
+  if (dessert) {
+    window.addToCart(dessert);
+  }
+
+
+  // los botones de los productos
+  window.synchronizeProductButtons();
 }
 
 function incrementCounterDessert(name) {
   countOrdersDesserts[name] += 1;
-  console.log(countOrdersDesserts);
+
+  const dessert = desserts.find(d => d.name === name);
+  if (dessert) {
+    window.addToCart(dessert);
+  }
+
+  const containerDessert = d.getElementById(name);
+  const btnCounterProduct = containerDessert.querySelector(".counter-product");
+  btnCounterProduct.querySelector("span").innerHTML = countOrdersDesserts[name];
+
+  // botones de los productos
+  window.synchronizeProductButtons();
 }
 
 function listenerResize(event) {
@@ -69,34 +111,25 @@ function listenerResize(event) {
 }
 
 function addEventsUI() {
-  // añadiendo eventos para el botón de añadir postres
   $$(".btn-add-product").forEach((btn) => {
     btn.addEventListener("click", handleClickAddToCart);
   });
 
-  // añadiendo evento para los botones de incremento y decremento
   $$(".counter-product").forEach((counterProductContainer) => {
     const btnAdd = $(".btn-add-car", counterProductContainer);
     const btnDecrease = $(".btn-decrease-car", counterProductContainer);
     const counter = $("span", counterProductContainer);
 
-    // maneja el evento de añadir
     btnAdd.addEventListener("click", (event) => {
       const { name } = event.target.dataset;
       incrementCounterDessert(name);
       counter.innerHTML = countOrdersDesserts[name];
     });
 
-    // maneja el evento de disminuir
     btnDecrease.addEventListener("click", (event) => {
       const { name } = event.target.dataset;
       decrementCounterDessert(name);
       counter.innerHTML = countOrdersDesserts[name];
-      if (countOrdersDesserts[name] == 0) {
-        const containerDessert = d.getElementById(name);
-        $(".counter-product", containerDessert).style = "display:none;";
-        $(".btn-add-product", containerDessert).style = "display:flex;";
-      }
     });
   });
 }
