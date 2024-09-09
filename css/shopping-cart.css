@@ -1,70 +1,65 @@
-#shopping-cart {
-  width: min(100%, 500px);
-  align-self: center;
-  background-color: var(--rose-50);
-  border-radius: var(--rounded-md);
-  padding: 20px;
+.car-order-total {
+  align-items: center;
   display: flex;
-  gap: 20px;
-  flex-direction: column;
+  justify-content: space-between;
 
-  @media (min-width: 1280px) {
-    align-self: flex-start;
-    width: min(100%, 350px);
+  & p {
+    color: var(--rose-700);
   }
 
-  & h3 {
-    color: var(--red);
+  & span {
+    color: var(--rose-900);
+    font-size: var(--text-3xl);
     font-weight: var(--font-bold);
-    font-size: var(--text-2xl);
-
-    & span {
-      font-weight: inherit;
-      font-size: inherit;
-    }
   }
-
-  & > img {
-    align-self: center;
-    height: 150px;
-    width: 150px;
-  }
-
-  & > p {
-    text-align: center;
-    color: var(--rose-500);
-    font-weight: var(--font-semibold);
-  }
-  /* @media (min-width: 1280px) {
-    width: min(100%, 300px);
-  } */
 }
 
-.card-item-dessert {
+.car-carbon-neutral {
+  background-color: var(--rose-100);
+  border-radius: var(--rounded-md);
   display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+
+  & span {
+    color: var(--rose-700);
+    font-weight: var(--font-semibold);
+  }
+}
+
+.car-confirm-order {
+  background-color: var(--red);
+  border-radius: var(--rounded-full);
+  color: var(--rose-50);
+  padding: 20px;
 }
 
 .card-item-dessert-data {
-  flex-grow: 1;
-  text-align: start;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   gap: 5px;
+  text-align: start;
 
-  & p {
-    font-weight: var(--font-bold);
-    color: var(--rose-900);
-  }
   & p:last-child {
     display: flex;
     gap: 10px;
+
     .count-total-dessert {
       color: var(--red);
       font-weight: var(--font-bold);
     }
+
     .price-dessert {
       color: var(--rose-500);
     }
+
+    & p {
+      color: var(--rose-900);
+      font-weight: var(--font-bold);
+    }
+
     .price-total-dessert {
       color: var(--rose-500);
       font-weight: var(--font-semibold);
@@ -75,23 +70,64 @@
 .card-item-dessert-delete {
   align-self: center;
   display: grid;
-  place-items: center;
   flex-basis: 40px;
+  place-items: center;
 
   & button {
+    border: 2px solid var(--rose-500);
+    border-radius: var(--rounded-full);
     display: grid;
     place-items: center;
-    border-radius: var(--rounded-full);
-    border: 2px solid var(--rose-500);
-    & img {
-      width: 15px;
+
+    & > img {
       height: 15px;
+      width: 15px;
     }
   }
 }
 
-.car-carbon-neutral {
+#shopping-cart {
+  align-self: center;
+  background-color: var(--rose-50);
+  border-radius: var(--rounded-md);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  width: min(100%, 500px);
+  @media (width >= 1280px) {
+    align-self: flex-start;
+    width: min(100%, 350px);
+  }
+
+  & h3 {
+    color: var(--red);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+
+    & span {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  & > img {
+    align-self: center;
+    height: 150px;
+    width: 150px;
+  }
+
+  & > p {
+    color: var(--rose-500);
+    font-weight: var(--font-semibold);
+    text-align: center;
+  }
+
+  /* @media (min-width: 1280px) {
+    width: min(100%, 300px);
+  } */
 }
 
-.car-confirm-order {
+.card-item-dessert {
+  display: flex;
 }

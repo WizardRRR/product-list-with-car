@@ -11,8 +11,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 50px;
-
-  @media (min-width: 1280px) {
+  justify-content: center;
+  @media (width >= 1280px) {
     flex-direction: row;
   }
 }
@@ -23,8 +23,8 @@ h1 {
 }
 
 .card-product-wrapper {
-  gap: 40px 20px;
   display: grid;
+  gap: 40px 20px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-items: center;
   width: min(100%, 1000px);
