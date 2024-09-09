@@ -1,3 +1,8 @@
+.shopping-cart-dessert {
+  display: flex;
+  flex-direction: column;
+}
+
 .car-order-total {
   align-items: center;
   display: flex;
@@ -36,11 +41,18 @@
 }
 
 .card-item-dessert-data {
+  border-bottom: 1px solid var(--gray);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   gap: 5px;
+  padding: 10px 0;
   text-align: start;
+
+  & p {
+    color: var(--rose-900);
+    font-weight: var(--font-semibold);
+  }
 
   & p:last-child {
     display: flex;
@@ -53,11 +65,6 @@
 
     .price-dessert {
       color: var(--rose-500);
-    }
-
-    & p {
-      color: var(--rose-900);
-      font-weight: var(--font-bold);
     }
 
     .price-total-dessert {
